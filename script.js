@@ -29,13 +29,13 @@
       category: 'fullstack',
       complexity: 'high',
       featured: true,
-      description: 'Sistema POS multi-capa para cafetería con arquitectura distribuida: backend FastAPI con JWT, cliente desktop PyQt6 con patrón MVC, app Android nativa con Jetpack Compose + Material 3, e integración de pagos Mercado Pago.',
-      fullDescription: 'BitCafe es un sistema POS completo multi-capa para la gestión de pedidos y pagos en cafetería, con una arquitectura distribuida moderna. El backend está construido con FastAPI y SQLAlchemy, con autenticación JWT, CRUD completo y API REST documentada con Swagger. El cliente de escritorio usa PyQt6 con patrón MVC y ttkbootstrap para una interfaz moderna. La app Android está desarrollada con Kotlin, Jetpack Compose y Material 3, usando Hilt para inyección de dependencias, Room para almacenamiento local, y WorkManager para tareas en segundo plano. La integración de pagos con Mercado Pago permite transacciones seguras en tiempo real.',
-      features: ['Backend FastAPI con autenticación JWT y CRUD completo', 'App Android nativa con Jetpack Compose + Material 3 + Hilt', 'Cliente desktop PyQt6 con arquitectura MVC', 'Integración de pagos con Mercado Pago', 'Notificaciones con WorkManager en segundo plano'],
+      description: 'Ecosistema POS completo para cafetería: backend REST API con FastAPI + SQLAlchemy + JWT, cliente desktop PyQt6 con patrón MVC, app Android nativa con Jetpack Compose + Material 3, e integración de pagos Mercado Pago.',
+      fullDescription: 'BitCafe es un ecosistema POS completo multi-capa para la gestión de pedidos y pagos en cafetería. El backend REST API está construido con FastAPI y SQLAlchemy, con autenticación JWT con refresh tokens, CRUD completo de productos/pedidos/usuarios, e integración del gateway de pagos Mercado Pago, todo documentado con Swagger/OpenAPI. El cliente de escritorio usa PyQt6 con patrón MVC y ttkbootstrap. La app Android está desarrollada con Kotlin, Jetpack Compose y Material 3, con Hilt para inyección de dependencias, Room para almacenamiento local y WorkManager para tareas en segundo plano.',
+      features: ['Backend REST API con FastAPI + SQLAlchemy + JWT (refresh tokens)', 'App Android nativa con Jetpack Compose + Material 3 + Hilt + Room', 'Cliente desktop PyQt6 con arquitectura MVC y ttkbootstrap', 'Integración de pagos con Mercado Pago', 'API documentada con Swagger/OpenAPI', 'CRUD completo de productos, pedidos y usuarios'],
       year: '2025',
-      techs: ['FastAPI', 'PyQt6', 'SQLAlchemy', 'Jetpack Compose', 'Mercado Pago', 'Hilt', 'Room'],
-      files: 203,
-      size: '15.7 MB',
+      techs: ['FastAPI', 'PyQt6', 'SQLAlchemy', 'Jetpack Compose', 'Mercado Pago', 'Hilt', 'Room', 'Kotlin', 'Python'],
+      files: 228,
+      size: '15.8 MB',
       badge: 'fullstack',
       githubUrl: 'https://github.com/Jesus26032005/bitcafe',
       demoUrl: null
@@ -76,24 +76,6 @@
       githubUrl: 'https://github.com/Jesus26032005/union-zalor',
       demoUrl: null
     },
-    {
-      id: 'bitcafe-api',
-      name: 'BitCafe API',
-      type: 'api',
-      category: 'api',
-      complexity: 'medium',
-      featured: false,
-      description: 'Backend REST API standalone para el ecosistema BitCafe con FastAPI y SQLAlchemy: autenticación JWT con refresh tokens, CRUD completo de productos/pedidos/usuarios, integración de pagos Mercado Pago y documentación Swagger/OpenAPI.',
-      fullDescription: 'BitCafe API es el backend REST API standalone del ecosistema BitCafe, construido con FastAPI y SQLAlchemy. Implementa autenticación JWT con refresh tokens para sesiones seguras, CRUD completo para la gestión de productos, pedidos y usuarios con validación de datos, integración del gateway de pagos Mercado Pago para procesar transacciones, y documentación automática interactiva con Swagger y OpenAPI. Diseñada como API RESTful siguiendo las mejores prácticas de diseño de APIs.',
-      features: ['API REST con FastAPI y SQLAlchemy', 'Autenticación JWT con refresh tokens', 'CRUD completo de productos, pedidos y usuarios', 'Integración de pagos con Mercado Pago', 'Documentación automática con Swagger/OpenAPI'],
-      year: '2025',
-      techs: ['FastAPI', 'SQLAlchemy', 'Mercado Pago'],
-      files: 25,
-      size: '65 KB',
-      badge: 'api',
-      githubUrl: 'https://github.com/Jesus26032005/bitcafe-api',
-      demoUrl: null
-    }
   ];
 
   const skillsData = [
@@ -433,8 +415,7 @@
     'orientatec': { icon: 'lucide-map-pin', gradient: 'linear-gradient(135deg, #6366f1, #a78bfa)' },
     'bitcafe': { icon: 'lucide-mug', gradient: 'linear-gradient(135deg, #34d399, #22d3ee)' },
     'practicas-unidas': { icon: 'lucide-image', gradient: 'linear-gradient(135deg, #fb7185, #f472b6)' },
-    'union-zalor': { icon: 'lucide-users', gradient: 'linear-gradient(135deg, #fb923c, #f97316)' },
-    'bitcafe-api': { icon: 'lucide-cpu', gradient: 'linear-gradient(135deg, #34d399, #10b981)' }
+    'union-zalor': { icon: 'lucide-users', gradient: 'linear-gradient(135deg, #fb923c, #f97316)' }
   };
 
   function renderProjects(list) {
