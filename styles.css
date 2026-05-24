@@ -267,17 +267,19 @@ main { position: relative; z-index: 1; }
   letter-spacing: 0.05em;
 }
 
-.hero-avatar { margin-bottom: 10px; }
+.hero-avatar { margin-bottom: 14px; }
 
-.avatar-monogram {
-  display: flex; align-items: center; justify-content: center;
-  width: 40px; height: 40px; border-radius: 12px;
-  font-size: 1rem; font-weight: 700; letter-spacing: -0.03em;
-  color: var(--bg-deep);
-  background: var(--gradient-cyber);
-  box-shadow: 0 0 30px rgba(0, 245, 255, 0.2), 0 0 60px rgba(0, 245, 255, 0.05);
-  animation: pulseGlow 3s ease-in-out infinite;
+.avatar-img {
+  width: 80px; height: 80px; border-radius: 50%;
+  object-fit: cover; display: block;
+  border: 2px solid rgba(0, 245, 255, 0.15);
+  box-shadow: 0 0 30px rgba(0, 245, 255, 0.15), 0 0 60px rgba(0, 245, 255, 0.03);
+  transition: var(--transition);
 }
+
+.avatar-img:hover { border-color: rgba(0, 245, 255, 0.3); box-shadow: 0 0 40px rgba(0, 245, 255, 0.2); }
+
+.avatar-monogram { display: none; }
 
 .hero-title {
   font-size: clamp(1.5rem, 3.2vw, 2.2rem);
