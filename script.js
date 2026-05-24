@@ -447,7 +447,7 @@
       const featuredClass = p.featured ? 'featured' : '';
       const meta = projectMeta[p.id] || { icon: 'lucide-folder', gradient: 'linear-gradient(135deg, #6366f1, #818cf8)' };
       return `
-        <div class="project-card ${featuredClass}" data-project-id="${p.id}" tabindex="0" aria-label="Ver detalles de ${p.name}" style="animation-delay:${i * 0.04}s">
+        <div class="project-card ${featuredClass}" data-project-id="${p.id}" style="animation-delay:${i * 0.04}s">
           <div class="project-banner" style="background:${meta.gradient}">
             <i class="project-banner-icon ${meta.icon}"></i>
           </div>
@@ -839,23 +839,7 @@
     initModal();
     observeSections();
 
-    document.getElementById('projectsGrid')?.addEventListener('click', (e) => {
-      const card = e.target.closest('.project-card');
-      if (!card) return;
-      if (e.target.closest('a, button, .project-action-btn')) return;
-      const id = card.dataset.projectId;
-      if (id) { lastFocusedEl = card; openModal(id); }
-    });
-
-    document.getElementById('projectsGrid')?.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        const card = e.target.closest('.project-card');
-        if (!card) return;
-        e.preventDefault();
-        const id = card.dataset.projectId;
-        if (id) { lastFocusedEl = card; openModal(id); }
-      }
-    });
+    
 
     setTimeout(() => {
       const subEl = document.querySelector('.hero-subtitle');
