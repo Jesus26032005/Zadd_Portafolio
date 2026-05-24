@@ -573,6 +573,113 @@
     }).join('');
   }
 
+  const learningItems = [
+    { name: 'LLMs & IA Generativa', icon: 'lucide-brain-circuit' },
+    { name: 'Computer Vision avanzada', icon: 'lucide-scan-eye' },
+    { name: 'Arquitectura Backend', icon: 'lucide-server' },
+    { name: 'Italiano', icon: 'lucide-languages' },
+    { name: 'Sistemas Inteligentes', icon: 'lucide-cpu' },
+    { name: 'Linux & Automatización', icon: 'lucide-terminal' },
+    { name: 'Machine Learning Ops', icon: 'lucide-git-branch' }
+  ];
+
+  function renderLearning() {
+    const grid = document.getElementById('learningGrid');
+    if (!grid) return;
+    grid.innerHTML = learningItems.map(item => `
+      <span class="learning-pill">
+        <i class="${item.icon}"></i> ${item.name}
+      </span>
+    `).join('');
+  }
+
+  const timelineData = [
+    { date: '2024', title: 'Fundamentos de programación', desc: 'C, Python, algoritmos clásicos y estructuras de datos. Base sólida en lógica computacional.' },
+    { date: '2024', title: 'Desarrollo web fullstack', desc: 'PHP, JavaScript, MySQL, Apache. Primer despliegue en producción con Orientatec.' },
+    { date: '2025', title: 'Computer Vision', desc: 'OpenCV, FFT/DCT, filtrado espacial, segmentación. Más de 30 operaciones implementadas.' },
+    { date: '2025', title: 'Machine Learning', desc: 'scikit-learn, KNN, Random Forest, Naive Bayes, PCA, clustering. Algoritmos bioinspirados con DEAP.' },
+    { date: '2025', title: 'Arquitectura de software', desc: 'FastAPI, MVC, REST APIs, JWT, inyección de dependencias. Sistemas multi-capa con BitCafe.' },
+    { date: '2025', title: 'Desarrollo Android', desc: 'Kotlin, Jetpack Compose, Material 3, Hilt, Room. Apps nativas con arquitectura moderna.' },
+    { date: '2026', title: 'NLP y sistemas de lenguaje', desc: 'spaCy, NLTK, Word2Vec, TF-IDF. Clasificación de sentimientos y procesamiento textual.' },
+    { date: '2026', title: 'IA Generativa y LLMs', desc: 'Prompt engineering, fine-tuning, generative AI. Integración de modelos de lenguaje en aplicaciones.' }
+  ];
+
+  function renderTimeline() {
+    const container = document.getElementById('timelineContainer');
+    if (!container) return;
+    container.innerHTML = timelineData.map((item, i) => `
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date">${item.date}</div>
+        <div class="timeline-title">${item.title}</div>
+        <div class="timeline-desc">${item.desc}</div>
+      </div>
+    `).join('');
+
+    setTimeout(() => {
+      container.querySelectorAll('.timeline-item').forEach((el, i) => {
+        setTimeout(() => el.classList.add('visible'), i * 120);
+      });
+    }, 200);
+  }
+
+  function initTerminal() {
+    const input = document.getElementById('terminalInput');
+    const body = document.getElementById('terminalBody');
+    if (!input || !body) return;
+
+    const commands = {
+      whoami: { text: 'Zaddkiel Martinez · Ingeniero en IA · ESCOM IPN', cls: 'highlight' },
+      skills: { text: 'IA & ML · Computer Vision · NLP · Backend · Fullstack · Algoritmos · Software Eng. · Mobile', cls: 'skills' },
+      tech: { text: 'Python · C · Java · Kotlin · FastAPI · OpenCV · scikit-learn · spaCy · NLTK · SQL · PHP · JavaScript', cls: 'tech' },
+      projects: { text: 'Orientatec · BitCafe · PracticasUnidas · Union Zalor · BitCafe API', cls: 'projects' },
+      certifications: { text: '10 certificaciones: Sololearn · Kaggle · Codecademy · Udemy · Cisco', cls: 'certs' },
+      contact: { text: 'Email: zaddkielma@gmail.com · GitHub: @Jesus26032005 · LinkedIn: Zaddkiel Martinez', cls: 'highlight' },
+      education: { text: 'Ingeniería en Inteligencia Artificial · ESCOM IPN · México', cls: 'highlight' },
+      languages: { text: 'Español (Nativo) · Inglés (B1-B2) · Italiano (Aprendiendo)', cls: 'tech' },
+      help: { text: 'whoami · skills · tech · projects · certifications · contact · education · languages · clear · help', cls: 'certs' },
+      clear: { text: '', cls: '' }
+    };
+
+    function addLine(html, isCmd = false) {
+      const line = document.createElement('div');
+      line.className = 'terminal-line';
+      if (isCmd) {
+        line.innerHTML = `<span class="terminal-prompt">jmartinez@portfolio:~$</span> <span class="terminal-output">${html}</span>`;
+      } else {
+        line.innerHTML = html;
+      }
+      body.appendChild(line);
+      body.scrollTop = body.scrollHeight;
+    }
+
+    function processCmd(val) {
+      const cmd = val.trim().toLowerCase();
+      addLine(cmd, true);
+      if (cmd === 'clear') {
+        body.innerHTML = '';
+        return;
+      }
+      const result = commands[cmd];
+      if (result) {
+        if (result.text) {
+          addLine(`<span class="terminal-output ${result.cls}">${result.text}</span>`);
+        }
+      } else {
+        addLine(`<span class="terminal-output" style="color:#ec4899">comando no encontrado: ${cmd}. Escribe <span class="terminal-cmd">help</span></span>`);
+      }
+    }
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        processCmd(input.value);
+        input.value = '';
+      }
+    });
+
+    document.querySelector('.terminal')?.addEventListener('click', () => input.focus());
+  }
+
   function initCursorGlow() {
     const glow = document.getElementById('cursor-glow');
     if (!glow) return;
@@ -618,6 +725,8 @@
     });
   }
 
+  let openModal;
+
   function initModal() {
     const overlay = document.getElementById('modalOverlay');
     const closeBtn = document.getElementById('modalClose');
@@ -626,7 +735,7 @@
       return projects.find(p => p.id === id);
     }
 
-    function openModal(projectId) {
+    openModal = function(projectId) {
       const p = getProjectById(projectId);
       if (!p) return;
 
@@ -705,11 +814,21 @@
     renderTechCloud();
     renderSkills();
     renderCertifications();
+    renderLearning();
+    renderTimeline();
+    initTerminal();
     renderProjects(projects);
-    reloadIcons();
     initFilters();
     initModal();
     observeSections();
+
+    document.getElementById('projectsGrid')?.addEventListener('click', (e) => {
+      const card = e.target.closest('.project-card');
+      if (card) {
+        const id = card.dataset.projectId;
+        if (id) openModal(id);
+      }
+    });
 
     setTimeout(() => {
       const subEl = document.querySelector('.hero-subtitle');

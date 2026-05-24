@@ -9,6 +9,7 @@
   <meta property="og:title" content="Zaddkiel Martinez | Ingeniero en IA">
   <meta property="og:description" content="Ingeniero en Inteligencia Artificial · Computer Vision · Fullstack Developer · ESCOM IPN">
   <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%2300f5ff'/%3E%3Cstop offset='100%25' stop-color='%238b5cf6'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='32' height='32' rx='6' fill='%230a0a0f'/%3E%3Ctext x='16' y='22' font-family='Inter,system-ui,sans-serif' font-size='16' font-weight='800' text-anchor='middle' fill='url(%23g)'%3EZM%3C/text%3E%3C/svg%3E">
   <title>Zaddkiel Martinez | Ingeniero en IA</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,8 +27,12 @@
       <div class="nav-links" id="navLinks">
         <a href="#about" class="nav-link">Sobre mí</a>
         <a href="#skills" class="nav-link">Skills</a>
+        <a href="#learning" class="nav-link">Aprendiendo</a>
         <a href="#certifications" class="nav-link">Certificaciones</a>
+        <a href="#timeline" class="nav-link">Trayectoria</a>
         <a href="#projects" class="nav-link">Proyectos</a>
+        <a href="#github" class="nav-link">GitHub</a>
+        <a href="#terminal" class="nav-link">Terminal</a>
         <a href="#contact" class="nav-link">Contacto</a>
       </div>
       <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -182,6 +187,17 @@
       </div>
     </section>
 
+    <section class="section learning" id="learning">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Crecimiento</span>
+          <h2 class="section-title">Actualmente explorando</h2>
+          <p class="section-description">Tecnologías y áreas que estoy profundizando</p>
+        </div>
+        <div class="learning-grid" id="learningGrid"></div>
+      </div>
+    </section>
+
     <section class="section certifications" id="certifications">
       <div class="container">
         <div class="section-header">
@@ -194,6 +210,17 @@
         </div>
         <div class="certs-grid" id="certsGrid">
         </div>
+      </div>
+    </section>
+
+    <section class="section timeline-section" id="timeline">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Trayectoria</span>
+          <h2 class="section-title">Evolución técnica</h2>
+          <p class="section-description">Mi camino en ingeniería de software e IA</p>
+        </div>
+        <div class="timeline" id="timelineContainer"></div>
       </div>
     </section>
 
@@ -222,6 +249,55 @@
           </div>
         </div>
         <div class="projects-grid" id="projectsGrid">
+        </div>
+      </div>
+    </section>
+
+    <section class="section github-section" id="github">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Open Source</span>
+          <h2 class="section-title">GitHub Activity</h2>
+          <p class="section-description">Estadísticas de mi perfil público</p>
+        </div>
+        <div class="github-stats">
+          <picture>
+            <source srcset="https://github-readme-stats.vercel.app/api?username=Jesus26032005&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0a0a0f&title_color=00f5ff&text_color=a0a0b8&icon_color=00f5ff&border_radius=12" media="(prefers-color-scheme: dark)" />
+            <img src="https://github-readme-stats.vercel.app/api?username=Jesus26032005&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&title_color=00f5ff&text_color=a0a0b8&icon_color=00f5ff&border_radius=12" alt="GitHub Stats" />
+          </picture>
+          <picture>
+            <source srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Jesus26032005&layout=compact&hide_border=true&bg_color=0a0a0f&title_color=00f5ff&text_color=a0a0b8&border_radius=12" media="(prefers-color-scheme: dark)" />
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jesus26032005&layout=compact&hide_border=true&title_color=00f5ff&text_color=a0a0b8&border_radius=12" alt="Top Languages" />
+          </picture>
+          <picture>
+            <source srcset="https://streak-stats.demolab.com?user=Jesus26032005&hide_border=true&background=0a0a0f&ring=00f5ff&fire=8b5cf6&currStreakLabel=00f5ff&sideLabels=a0a0b8&currStreakNum=a0a0b8&sideNums=00f5ff&border_radius=12" media="(prefers-color-scheme: dark)" />
+            <img src="https://streak-stats.demolab.com?user=Jesus26032005&hide_border=true&ring=00f5ff&fire=8b5cf6&currStreakLabel=00f5ff&sideLabels=a0a0b8&currStreakNum=a0a0b8&sideNums=00f5ff&border_radius=12" alt="GitHub Streak" />
+          </picture>
+        </div>
+      </div>
+    </section>
+
+    <section class="section terminal-section" id="terminal">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Terminal</span>
+          <h2 class="section-title">Interactivo</h2>
+          <p class="section-description">Explora mi perfil desde la terminal</p>
+        </div>
+        <div class="terminal" id="terminalContainer">
+          <div class="terminal-header">
+            <span class="terminal-dot dot-red"></span>
+            <span class="terminal-dot dot-yellow"></span>
+            <span class="terminal-dot dot-green"></span>
+            <span class="terminal-title">jmartinez@portfolio:~</span>
+          </div>
+          <div class="terminal-body" id="terminalBody">
+            <div class="terminal-line"><span class="terminal-prompt">jmartinez@portfolio:~$</span> <span class="terminal-welcome">Bienvenido. Escribe <span class="terminal-cmd">help</span> para ver comandos.</span></div>
+          </div>
+          <div class="terminal-input-line">
+            <span class="terminal-prompt">jmartinez@portfolio:~$</span>
+            <input type="text" class="terminal-input" id="terminalInput" placeholder="escribe un comando..." autofocus aria-label="Terminal command input">
+          </div>
         </div>
       </div>
     </section>
