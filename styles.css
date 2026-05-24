@@ -761,7 +761,7 @@ main { position: relative; z-index: 1; }
 .project-banner svg, .modal-banner svg {
   width: 32px; height: 32px; opacity: 0.08;
   position: relative; z-index: 1; color: white;
-}`
+}
 
 .project-actions { display: flex; gap: 4px; margin-top: 8px; }
 
