@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+  <defs>
+    <linearGradient id="indigo" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="purple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a78bfa"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
+    </linearGradient>
+    <linearGradient id="emerald" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+    <linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="rose" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#e11d48"/>
+      <stop offset="100%" stop-color="#fb7185"/>
+    </linearGradient>
+  </defs>
+  <g id="icon-python">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#indigo)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#indigo)" stroke-width="1.5"/>
+    <path d="M9 7a1 1 0 011-1h4a1 1 0 011 1v1a1 1 0 01-1 1h-4a1 1 0 01-1-1V7zM9 15a1 1 0 011-1h4a1 1 0 011 1v1a1 1 0 01-1 1h-4a1 1 0 01-1-1v-1z" fill="url(#indigo)"/>
+    <path d="M7 10h10M7 14h10" stroke="url(#indigo)" stroke-width="1.2" stroke-linecap="round"/>
+  </g>
+  <g id="icon-javascript">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#orange)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#orange)" stroke-width="1.5"/>
+    <text x="12" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="url(#orange)" font-family="monospace">JS</text>
+  </g>
+  <g id="icon-php">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#purple)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#purple)" stroke-width="1.5"/>
+    <text x="12" y="16" text-anchor="middle" font-size="9" font-weight="bold" fill="url(#purple)" font-family="monospace">PHP</text>
+  </g>
+  <g id="icon-kotlin">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#cyan)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#cyan)" stroke-width="1.5"/>
+    <text x="12" y="16" text-anchor="middle" font-size="7" font-weight="bold" fill="url(#cyan)" font-family="monospace">KT</text>
+  </g>
+  <g id="icon-sql">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#emerald)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#emerald)" stroke-width="1.5"/>
+    <path d="M7 10l2 4 2-4M13 10l2 4 2-4" stroke="url(#emerald)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="icon-shell">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#rose)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#rose)" stroke-width="1.5"/>
+    <path d="M8 9l3 3-3 3M13 15h3" stroke="url(#rose)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="icon-html">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#orange)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#orange)" stroke-width="1.5"/>
+    <path d="M9 8l-2 4 2 4M15 8l2 4-2 4M10.5 8l-1 8" stroke="url(#orange)" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="icon-fastapi">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#emerald)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#emerald)" stroke-width="1.5"/>
+    <path d="M8 12h8M12 8v8" stroke="url(#emerald)" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="icon-opencv">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#rose)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#rose)" stroke-width="1.5"/>
+    <circle cx="12" cy="12" r="4" fill="none" stroke="url(#rose)" stroke-width="1.5"/>
+    <circle cx="12" cy="12" r="1.5" fill="url(#rose)"/>
+  </g>
+  <g id="icon-numpy">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#indigo)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#indigo)" stroke-width="1.5"/>
+    <path d="M8 8v8M12 8v8M8 12h8" stroke="url(#indigo)" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="icon-android">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#emerald)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#emerald)" stroke-width="1.5"/>
+    <path d="M8 12l-1 4M16 12l1 4M9 16h6M7 12a5 5 0 0110 0" fill="none" stroke="url(#emerald)" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="icon-pyqt">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#cyan)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#cyan)" stroke-width="1.5"/>
+    <rect x="7" y="8" width="10" height="8" rx="1" fill="none" stroke="url(#cyan)" stroke-width="1.2"/>
+    <path d="M7 12h10" stroke="url(#cyan)" stroke-width="1.2"/>
+  </g>
+  <g id="icon-compose">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#indigo)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#indigo)" stroke-width="1.5"/>
+    <rect x="7" y="7" width="10" height="10" rx="2" fill="none" stroke="url(#indigo)" stroke-width="1.2"/>
+    <circle cx="12" cy="12" r="2" fill="url(#indigo)" opacity="0.5"/>
+  </g>
+  <g id="icon-pillow">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#purple)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#purple)" stroke-width="1.5"/>
+    <circle cx="12" cy="12" r="3" fill="none" stroke="url(#purple)" stroke-width="1.5"/>
+    <path d="M12 9v6M9 12h6" stroke="url(#purple)" stroke-width="1.2"/>
+  </g>
+  <g id="icon-matplotlib">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#orange)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#orange)" stroke-width="1.5"/>
+    <path d="M7 16l3-6 2 3 3-5 2 8" fill="none" stroke="url(#orange)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="icon-hyprland">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#cyan)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#cyan)" stroke-width="1.5"/>
+    <path d="M8 8l8 8M8 16l8-8" stroke="url(#cyan)" stroke-width="1.5" stroke-linecap="round"/>
+  </g>
+  <g id="icon-c">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#indigo)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#indigo)" stroke-width="1.5"/>
+    <text x="12" y="16" text-anchor="middle" font-size="11" font-weight="bold" fill="url(#indigo)" font-family="monospace">C</text>
+  </g>
+  <g id="icon-java">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#orange)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#orange)" stroke-width="1.5"/>
+    <rect x="8" y="8" width="8" height="8" rx="1" fill="none" stroke="url(#orange)" stroke-width="1.2"/>
+    <path d="M11 10l2 2-2 2" stroke="url(#orange)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="icon-terminal">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#cyan)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#cyan)" stroke-width="1.5"/>
+    <path d="M8 9l3 3-3 3M13 15h3" stroke="url(#cyan)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="icon-github">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="#fff" opacity="0.1"/>
+    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22" fill="none" stroke="#f4f4f5" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="icon-linkedin">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="#0a66c2" opacity="0.15"/>
+    <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" fill="none" stroke="#0a66c2" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="4" cy="4" r="2" fill="#0a66c2"/>
+  </g>
+  <g id="icon-mail">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#indigo)" opacity="0.15"/>
+    <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="url(#indigo)" stroke-width="1.5"/>
+    <path d="M3 7l9 6 9-6" stroke="url(#indigo)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="icon-location">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#rose)" opacity="0.15"/>
+    <path d="M12 22c4-4 8-7.5 8-12a8 8 0 00-16 0c0 4.5 4 8 8 12z" fill="none" stroke="url(#rose)" stroke-width="1.5"/>
+    <circle cx="12" cy="10" r="3" fill="none" stroke="url(#rose)" stroke-width="1.5"/>
+  </g>
+  <g id="icon-scipy">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#cyan)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#cyan)" stroke-width="1.5"/>
+    <path d="M8 12c0-2.2 1.8-4 4-4s4 1.8 4 4-1.8 4-4 4" fill="none" stroke="url(#cyan)" stroke-width="1.5"/>
+    <circle cx="12" cy="12" r="1" fill="url(#cyan)"/>
+  </g>
+  <g id="icon-ttkbootstrap">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#purple)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#purple)" stroke-width="1.5"/>
+    <rect x="7" y="7" width="10" height="10" rx="2" fill="none" stroke="url(#purple)" stroke-width="1.2"/>
+    <path d="M9 12l2 2 4-4" stroke="url(#purple)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <g id="icon-mercadopago">
+    <rect x="0" y="0" width="24" height="24" rx="4" fill="url(#emerald)" opacity="0.15"/>
+    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="url(#emerald)" stroke-width="1.5"/>
+    <path d="M7 11c0-2 1.5-3 3-3s3 1 3 3c0 1.5-1 2-2 3s-1 2-1 3" fill="none" stroke="url(#emerald)" stroke-width="1.5" stroke-linecap="round"/>
+    <circle cx="10" cy="17" r="1" fill="url(#emerald)"/>
+  </g>
+</svg>
