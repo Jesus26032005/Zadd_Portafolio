@@ -447,7 +447,7 @@
       const featuredClass = p.featured ? 'featured' : '';
       const meta = projectMeta[p.id] || { icon: 'lucide-folder', gradient: 'linear-gradient(135deg, #6366f1, #818cf8)' };
       return `
-        <div class="project-card ${featuredClass}" data-project-id="${p.id}" tabindex="0" role="button" aria-label="Ver detalles de ${p.name}" style="animation-delay:${i * 0.04}s">
+        <div class="project-card ${featuredClass}" data-project-id="${p.id}" tabindex="0" aria-label="Ver detalles de ${p.name}" style="animation-delay:${i * 0.04}s">
           <div class="project-banner" style="background:${meta.gradient}">
             <i class="project-banner-icon ${meta.icon}"></i>
           </div>
@@ -684,8 +684,13 @@
     const glow = document.getElementById('cursor-glow');
     if (!glow) return;
 
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const isTouchDevice = 'ontouchstart' in window;
+    if (prefersReducedMotion || isTouchDevice) { glow.style.display = 'none'; return; }
+
     let mouseX = 0, mouseY = 0;
     let currentX = 0, currentY = 0;
+    let rafId;
 
     document.addEventListener('mousemove', (e) => {
       mouseX = e.clientX;
@@ -696,9 +701,13 @@
       currentX += (mouseX - currentX) * 0.05;
       currentY += (mouseY - currentY) * 0.05;
       glow.style.transform = `translate(${currentX - 150}px, ${currentY - 150}px)`;
-      requestAnimationFrame(tick);
+      rafId = requestAnimationFrame(tick);
     }
     tick();
+
+    document.addEventListener('visibilitychange', () => {
+      if (document.hidden && rafId) cancelAnimationFrame(rafId);
+    });
   }
 
   function observeSections() {
@@ -779,12 +788,14 @@
 
       reloadIcons();
       overlay.classList.add('open');
+      overlay.setAttribute('aria-hidden', 'false');
       document.body.style.overflow = 'hidden';
       setTimeout(() => document.getElementById('modalClose').focus(), 50);
     }
 
     function closeModal() {
       overlay.classList.remove('open');
+      overlay.setAttribute('aria-hidden', 'true');
       document.body.style.overflow = '';
       if (lastFocusedEl) { lastFocusedEl.focus(); lastFocusedEl = null; }
     }
@@ -809,6 +820,8 @@
   }
 
   function init() {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
     initNavbar();
     initNavbarScroll();
     initBackToTop();
@@ -828,27 +841,26 @@
 
     document.getElementById('projectsGrid')?.addEventListener('click', (e) => {
       const card = e.target.closest('.project-card');
-      if (card) {
-        const id = card.dataset.projectId;
-        if (id) { lastFocusedEl = card; openModal(id); }
-      }
+      if (!card) return;
+      if (e.target.closest('a, button, .project-action-btn')) return;
+      const id = card.dataset.projectId;
+      if (id) { lastFocusedEl = card; openModal(id); }
     });
 
     document.getElementById('projectsGrid')?.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' || e.key === ' ') {
         const card = e.target.closest('.project-card');
-        if (card) {
-          e.preventDefault();
-          const id = card.dataset.projectId;
-          if (id) { lastFocusedEl = card; openModal(id); }
-        }
+        if (!card) return;
+        e.preventDefault();
+        const id = card.dataset.projectId;
+        if (id) { lastFocusedEl = card; openModal(id); }
       }
     });
 
     setTimeout(() => {
       const subEl = document.querySelector('.hero-subtitle');
       if (subEl) {
-        const fullText = subEl.textContent.trim();
+        const fullText = subEl.innerText || subEl.textContent.replace(/\s+/g, ' ').trim();
         subEl.textContent = '';
         subEl.style.opacity = '1';
         typeWriter(subEl, fullText, 18);
