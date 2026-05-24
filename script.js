@@ -821,6 +821,7 @@
     renderTimeline();
     initTerminal();
     renderProjects(projects);
+    reloadIcons();
     initFilters();
     initModal();
     observeSections();
