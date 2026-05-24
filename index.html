@@ -16,12 +16,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="https://unpkg.com/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <script>window.lucide||document.documentElement.classList.add('no-lucide')</script>
 </head>
 <body>
   <div id="grid-bg"></div>
   <div id="cursor-glow" aria-hidden="true"></div>
 
-  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+  <nav class="navbar" aria-label="Navegación principal">
     <div class="container nav-inner">
       <a href="#" class="logo" aria-label="Inicio">MZ<span class="dot">.</span></a>
       <div class="nav-links" id="navLinks">
@@ -239,14 +240,15 @@
             <i class="search-icon lucide-search"></i>
             <input type="text" class="search-input" id="searchInput" placeholder="Buscar proyectos..." aria-label="Buscar proyectos">
           </div>
-          <div class="filter-tags" id="filterTags">
+          <fieldset class="filter-tags" id="filterTags">
+            <legend class="sr-only">Filtrar proyectos por categoría</legend>
             <button class="filter-btn active" data-filter="all">Todos</button>
             <button class="filter-btn" data-filter="fullstack">Fullstack</button>
             <button class="filter-btn" data-filter="web">Web</button>
             <button class="filter-btn" data-filter="computer-vision">Computer Vision</button>
             <button class="filter-btn" data-filter="desktop">Desktop</button>
             <button class="filter-btn" data-filter="api">API</button>
-          </div>
+          </fieldset>
         </div>
         <div class="projects-grid" id="projectsGrid">
         </div>
